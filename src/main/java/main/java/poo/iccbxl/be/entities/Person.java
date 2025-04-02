@@ -2,35 +2,30 @@ package main.java.poo.iccbxl.be.entities;
 
 import java.time.LocalDate;
 import java.util.UUID;
-import lombok.*;
 
-@Getter
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.Data;
+import java.util.ArrayList;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 
 public class Person {
-
-    private String name;
+    
     private UUID id;
+    private String name;
     private LocalDate registrationDate;
-    private Book[] books;
+    private ArrayList<Book> books = new ArrayList<>();
 
-    //constructeur vide
-    public Person() {
-        this.name = "unknown";
-        this.id = UUID.randomUUID();
-        this.registrationDate =  LocalDate.now();
-        this.books = new Book[0];
+    //fonvtion métiers :
 
-    }
+    public ArrayList<Book> getLateBooks() {
+        return null;
 
-    //constructeur full parametré
-    public Person(String name, UUID id, LocalDate registrationDate, Book[] books) {
-        this.name = name;
-        this.id = id;
-        this.registrationDate = registrationDate;
-        this.books = books; 
 
     }
-
     
-    
+   
 }
