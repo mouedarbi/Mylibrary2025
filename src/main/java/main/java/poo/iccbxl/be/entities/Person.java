@@ -1,4 +1,4 @@
-package poo.iccbxl.be.entities;
+package main.java.poo.iccbxl.be.entities;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -31,37 +31,6 @@ public class Person {
 
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public LocalDate getRegistrationDate() {
-        return registrationDate;
-    }
-
-    public void setRegistrationDate(LocalDate registrationDate) {
-        this.registrationDate = registrationDate;
-    }
-
-    public Book[] getBooks() {
-        return books;
-    }
-
-    public void setBooks(Book[] books) {
-        this.books = books;
-    }
-
+    
     
 }

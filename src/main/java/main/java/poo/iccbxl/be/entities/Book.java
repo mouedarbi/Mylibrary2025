@@ -1,4 +1,4 @@
-package poo.iccbxl.be.entities;
+package main.java.poo.iccbxl.be.entities;
 
 public class Book {
     public Book() {
