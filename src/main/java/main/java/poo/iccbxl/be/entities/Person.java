@@ -1,25 +1,29 @@
 package poo.iccbxl.be.entities;
 
-import java.util.Date;
+import java.time.LocalDate;
+import java.util.UUID;
+import lombok.*;
+
+@Getter
 
 public class Person {
 
     private String name;
-    private int id;
-    private Date registrationDate;
+    private UUID id;
+    private LocalDate registrationDate;
     private Book[] books;
 
     //constructeur vide
     public Person() {
         this.name = "unknown";
-        this.id = 0;
-        this.registrationDate = new Date();
+        this.id = UUID.randomUUID();
+        this.registrationDate =  LocalDate.now();
         this.books = new Book[0];
 
     }
 
     //constructeur full parametré
-    public Person(String name, int id, Date registrationDate, Book[] books) {
+    public Person(String name, UUID id, LocalDate registrationDate, Book[] books) {
         this.name = name;
         this.id = id;
         this.registrationDate = registrationDate;
@@ -35,19 +39,19 @@ public class Person {
         this.name = name;
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(UUID id) {
         this.id = id;
     }
 
-    public Date getRegistrationDate() {
+    public LocalDate getRegistrationDate() {
         return registrationDate;
     }
 
-    public void setRegistrationDate(Date registrationDate) {
+    public void setRegistrationDate(LocalDate registrationDate) {
         this.registrationDate = registrationDate;
     }
 
